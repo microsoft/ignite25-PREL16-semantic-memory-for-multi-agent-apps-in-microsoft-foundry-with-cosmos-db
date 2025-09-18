@@ -1,0 +1,82 @@
+# Configuration for GitHub Issue Labeler
+# This file defines rules for automatically applying labels to issues based on their title and content
+# 
+# Each label section contains regular expressions that will be matched against issue titles and bodies.
+# The matching is case-insensitive and uses word boundaries (\b) to avoid partial matches.
+#
+# For more information about the Issue Labeler action, see:
+# https://github.com/github/issue-labeler
+
+# General issue type labels
+bug:
+  - "\\bbug\\b"
+  - "\\berror\\b"
+  - "\\bissue\\b"
+  - "\\bproblem\\b"
+  - "\\bfail\\b"
+  - "\\bbroken\\b"
+  - "\\bcrash\\b"
+  - "\\bexception\\b"
+
+enhancement:
+  - "\\bfeature\\b"
+  - "\\benhancement\\b"
+  - "\\bimprovement\\b"
+  - "\\bnew\\b"
+  - "\\badd\\b"
+  - "\\bwould like\\b"
+  - "\\bfeature request\\b"
+
+documentation:
+  - "\\bdoc\\b"
+  - "\\bdocumentation\\b"
+  - "\\breadme\\b"
+  - "\\bguide\\b"
+  - "\\btutorial\\b"
+  - "\\bexamples\\b"
+
+question:
+  - "\\bquestion\\b"
+  - "\\bhow to\\b"
+  - "\\bhow do\\b"
+  - "\\bhelp\\b"
+  - "\\bwhat is\\b"
+  - "\\?"
+
+# Project-specific labels for Ignite PREL16 session
+ai-foundry:
+  - "\\bai foundry\\b"
+  - "\\bai-foundry\\b"
+  - "\\bazure ai\\b"
+  - "\\bai studio\\b"
+  - "\\bfoundry\\b"
+
+semantic-memory:
+  - "\\bsemantic memory\\b"
+  - "\\bsemantic-memory\\b"
+  - "\\bmemory\\b"
+  - "\\bembedding\\b"
+  - "\\bvector\\b"
+  - "\\bsearch\\b"
+  - "\\bretrieval\\b"
+
+multi-agent:
+  - "\\bmulti agent\\b"
+  - "\\bmulti-agent\\b"
+  - "\\bagent\\b"
+  - "\\bcoordination\\b"
+  - "\\bcollaboration\\b"
+  - "\\borchestration\\b"
+
+lab:
+  - "\\blab\\b"
+  - "\\bexercise\\b"
+  - "\\bworkshop\\b"
+  - "\\bhands-on\\b"
+  - "\\bstep\\b"
+
+ignite:
+  - "\\bignite\\b"
+  - "\\bignite2025\\b"
+  - "\\bPREL16\\b"
+  - "\\bignite 2025\\b"

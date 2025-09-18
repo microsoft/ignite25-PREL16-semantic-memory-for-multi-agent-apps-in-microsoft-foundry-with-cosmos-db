@@ -1,0 +1,53 @@
+# This workflow automatically adds new issues to the Ignite GitHub Project and applies labels
+# based on issue content. It is triggered when issues are opened.
+#
+# Prerequisites:
+# 1. Configure the IGNITE_PROJECT_URL repository variable with the actual GitHub Project URL
+#    Example: https://github.com/orgs/microsoft/projects/123
+# 2. Configure the ADD_TO_PROJECT_PAT secret with a Personal Access Token that has:
+#    - 'repo' scope for repository access
+#    - 'project' scope for GitHub Projects access
+#
+# For more information about GitHub Projects and automation, see:
+# https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project
+
+name: Add to Ignite Project and Apply Labels
+
+on:
+  issues:
+    types:
+      - opened
+
+permissions:
+  issues: write
+  contents: read
+  repository-projects: write
+
+jobs:
+  add-to-project:
+    name: Add issue to Ignite project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add to project
+        uses: actions/add-to-project@v1.0.2
+        with:
+          # Use repository variable for project URL configuration
+          # Set IGNITE_PROJECT_URL in repository settings > Variables
+          project-url: ${{ vars.IGNITE_PROJECT_URL || 'https://github.com/orgs/microsoft/projects/YOUR_PROJECT_NUMBER' }}
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+
+  label_issues:
+    name: Apply labels to new issues
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Apply labels based on issue content
+        uses: github/issue-labeler@v3.4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: .github/labeler.yml
+          enable-versioned-regex: 0
+          include-title: 1
+          include-body: 1

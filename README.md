@@ -1,144 +1,107 @@
-# Welcome Ignite 2025 Creators!
-
-Thanks for creating content for Ignite!  Please follow this guidance so all ignite repos have the same look and feel.
-
-## How to contact Skillable?
-
-If you have issues with the Skillable environment, please follow these steps:
-
-1. Open an issue in the [Issues](../../issues) tab using the `New issue` button.
-1. Describe the problem, be descriptive, use screenshots if possible etc.
-1. Tag the following Skillable employees:
-   - @kylerosenthal
-   - @TubaMikeBob
-   - @Naimjones16
-   - @jmbauf
-1. Have all the discussions related to the issue in the issue itself.
-1. Once the issue is resolved, please mark it as Closed.
-
-## Put your docs in the docs folder
-
-This repo is configured for a user to view the docs through mkdocs.
-
-1. update the `mkdocs.yml` file to reference your session. Look particularly for the `site_name`, `site_author`, and `repo_name` tags.
-1. Subfolders in the docs folder will show up as tabs in the navigation bar.
-
-## Guidance
-
-1. Do not turn on github pages for this repo, traffic to github pages isn't captured in our metrics.
-1. Do not store slides or recordings in this repo
-
-## Update the badges!
-
-1. if the foundry discord and github links aren't appropriate for your session you can remove or change them.
-2. See shields.io for how to build your own dynamic or static badge for your community destinations, or other sample repos for how they've done
-3. Please limit your repo to one row of badges under the session title.
-
-## MCP Server
-1. This repo has an mcp.json file and is configured to let agents connect to the Learn MCP Server.
-
-> **Important** Make sure to avoid hardcoding sensitive information like API keys and other credentials by using input variables or environment files.
-
-
-## Update Readme Below
-
-1. Fill out the content in this file, below the banner graphic, including the session code.
-2. Please embed links to Learn with your campaign codes!
-3. Add resources for your session to the Resources and Next Steps table
-4. Change the Content Owner section to your info
-
-## Improve SEO
-
-1. Update the Repo Info for this repo 
-    1. Click the gear icon⚙️ in the upper right.
-    1. Set a good description of this repo.
-    1. Add the technologies that you're using in this session.
-
-## Questions?
-
-Send them to [Mike Kinsman](mailto:mikki@microsoft.com) and [Laurent Bugnion](lbugnion@microsoft.com), or surface your question through your content leads.  We are also monitoring issues logged in the repos.
-
-## Finished?
-
-- Remove the folders that you don't need or didn't use, *please don't leave them empty with placeholder readmes*
-- Delete this line and everything above it!
-
 <p align="center">
 <img src="img/Banner-ignite-25.png" alt="decorative banner" width="1200"/>
 </p>
 
 # [Microsoft Ignite 2025](https://ignite.microsoft.com)
 
-## 🔥BRKXXX: Implement Semantic Memories for Multi-Agent Apps in AI Foundry
-
-[![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/AIFoundryDiscord-Ignite25)
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=adff2f&logoColor=fff)](https://aka.ms/AIFoundryForum-Ignite25)
+## 🔥PREL16: Preday: Implement Semantic Memories for Multi-Agent Apps in AI Foundry with an MCP Server for Azure Cosmos DB
 
 ### Session Description
 
-*Add Session Description*
+Learn how to build intelligent, multi-agent apps with persistent, semantic memory using an MCP Server on Azure Cosmos DB. This hands-on workshop goes beyond basic memory storage to explore novel patterns for embedding and retrieving context across threads. Using LangGraph (Python) and Azure AI Foundry you’ll implement durable memory, semantic search, and agent collaboration. Leave with a scalable system that learns and adapts over time.
 
 ### 🧠 Learning Outcomes
 
+# Learning Outcomes
+
 By the end of this session, learners will be able to:
 
--  
--
--
+1. **Design and Implement Multi-Agent Systems**
+Build sophisticated multi-agent architectures using LangGraph, including orchestrator patterns, agent specialization, and coordinated workflows between multiple AI agents with distinct roles and responsibilities.
+
+2. **Master Agent-to-Agent Communication**
+Configure seamless handoffs between specialized agents (Hotel, Dining, Activity, Itinerary Generator) using transfer mechanisms and state management to create cohesive user experiences across domain boundaries.
+
+3. **Implement Production-Ready Agentic Memory Systems**
+Design and deploy persistent memory architectures using Azure Cosmos DB, including declarative (facts), procedural (preferences), and episodic (experiences) memory types with salience scoring and TTL policies.
+
+4. **Build Intelligent Preference Management**
+Create LLM-powered systems that automatically extract user preferences from natural language, detect contradictory preferences, resolve conflicts, and maintain coherent user profiles across sessions.
+
+5. **Configure Vector Search and Hybrid Retrieval**
+Integrate Azure Cosmos DB vector search with embedding generation and hybrid search patterns (vector + BM25) to enable semantic discovery of hotels, restaurants, and activities based on user preferences.
+
+6. **Implement Automatic Conversation Summarization**
+Build background summarization systems that compress long conversations while preserving context, using span-based compression and intelligent memory consolidation to maintain conversation continuity.
+
+7. **Deploy Observable Multi-Agent Systems**
+Integrate comprehensive observability using LangSmith tracing to monitor agent interactions, debug complex workflows, track token usage, and visualize execution paths across distributed agent networks.
+
+8. **Architect Tool Distribution Strategies**
+Design Model Control Protocol (MCP) server architectures that strategically distribute tools across agents, manage external API integrations, and maintain consistent interfaces between agents and data sources.
+
+9. **Handle Production Complexity**
+Implement error handling, session management, conflict resolution, memory superseding, and state persistence patterns necessary for production multi-agent applications with real user interactions.
+
+10. **Apply Agentic AI Best Practices**
+Understand when to use multi-agent vs. single-agent patterns, how to balance automation with user control, manage computational costs, and design systems that gracefully handle edge cases and evolving requirements.
 
 ### 💻 Technologies Used
 
-1.
-1.
-1.
+1. [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction)
+   - [Vector Search](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/vector-search)
+   - [Full Text Search](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/full-text-search)
+   - [Hybrid Search](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/hybrid-search)
+   - [Agentic Memory](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/agentic-memories)
+2. [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/)
+3. [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/)
+4. [Langraph](https://www.langchain.com/langgraph)
+5. [langSmith](https://docs.langchain.com/langsmith/home)
 
-### 🌟 Microsoft Learn MCP Server
+### 🚀 Getting Started
 
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Microsoft_Docs_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=microsoft.docs.mcp&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Flearn.microsoft.com%2Fapi%2Fmcp%22%7D)
+During Microsoft Ignite, this workshop is hosted in a virtual environment preconfigured with all necessary prerequisites and accounts.
+If you’re running the workshop outside of Ignite, you can either follow the exercises step by step or use the provided completed files to launch the multi-agent travel assistant application directly.
 
-The Microsoft Learn MCP Server is a remote MCP Server that enables clients like GitHub Copilot and other AI agents to bring trusted and up-to-date information directly from Microsoft's official documentation. Get started by using the one-click button above for VSCode or access the [mcp.json](.vscode/mcp.json) file included in this repo.
+#### Exercises:
 
-For more information, setup instructions for other dev clients, and to post comments and questions, visit our Learn MCP Server GitHub repo at [https://github.com/MicrosoftDocs/MCP](https://github.com/MicrosoftDocs/MCP). Find other MCP Servers to connect your agent to at [https://mcp.azure.com](https://mcp.azure.com).
+Work through the exercises to build the application step by step:
 
-*Note: When you use the Learn MCP Server, you agree with [Microsoft Learn](https://learn.microsoft.com/en-us/legal/termsofuse) and [Microsoft API Terms](https://learn.microsoft.com/en-us/legal/microsoft-apis/terms-of-use) of Use.*
+- [LangGraph (Python)](https://github.com/AzureCosmosDB/travel-multi-agent-workshop/blob/main/01_exercises/workshop/Home.md)
 
-### 📚 Resources and Next Steps
+#### Completed Files
 
-| Resources          | Links                             | Description        |
-|:-------------------|:----------------------------------|:-------------------|
-| Ignite 2025 Next Steps | [https://aka.ms/Ignite25-Next-Steps](https://aka.ms/Ignite25-Next-Steps?ocid=ignite25_nextsteps_cnl) | Links to all repos for Ignite 2025 Sessions |
-| Azure AI Foundry Community Discord | [![Microsoft Azure AI Foundry Discord](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/AIFoundryDiscord-Ignite25)| Connect with the Azure AI Foundry Community! |
-| Learn at Ignite | [https://aka.ms/LearnAtIgnite](https://aka.ms/LearnAtIgnite?ocid=ignite25_nextsteps_github_cnl) | Continue learning on Microsoft Learn |
+If you prefer to skip the exercises and run as demo directly:
+
+- [LangGraph (Python)](https://github.com/AzureCosmosDB/travel-multi-agent-workshop/blob/main/README.md)
 
 ## Content Owners
 
-<!-- TODO: Add yourself as a content owner
-1. Change the src in the image tag to {your github url}.png
-2. Change INSERT NAME HERE to your name
-3. Change the github url in the final href to your url. -->
-
 <table>
 <tr>
-    <td align="center"><a href="http://github.com/mikekinsman">
-        <img src="https://github.com/mikekinsman.png" width="100px;" alt="INSERT NAME HERE"
-"/><br />
-        <sub><b> INSERT NAME HERE
+    <td align="center"><a href="https://github.com/aayush3011">
+        <img src="https://github.com/aayush3011.png" width="100px;" alt="Tiago Pascoal" "/><br />
+        <sub><b> Aayush Kataria
 </b></sub></a><br />
-            <a href="https://github.com/mikekinsman" title="talk">📢</a> 
+            <a href="https://github.com/aayush3011" title="talk">📢</a> 
     </td>
-    <td align="center"><a href="http://github.com/mikekinsman">
-        <img src="https://github.com/mikekinsman.png" width="100px;" alt="INSERT NAME HERE
-"/><br />
-        <sub><b>INSERT NAME HERE
+    <td align="center"><a href="https://github.com/TheovanKraay">
+        <img src="https://github.com/TheovanKraay.png" width="100px;" alt="April Yoho"/><br />
+        <sub><b>Theo van Kraay
 </b></sub></a><br />
-            <a href="https://github.com/mikekinsman" title="talk">📢</a> 
+            <a href="https://github.com/TheovanKraay" title="talk">📢</a> 
     </td>
 </tr></table>
 
+## Resources & Next Steps
+
+| Resource               | Link                                                                                                 | Description                                 |
+|------------------------|------------------------------------------------------------------------------------------------------|---------------------------------------------|
+| Ignite 2025 Next Steps | [https://aka.ms/Ignite25-Next-Steps](https://aka.ms/Ignite25-Next-Steps?ocid=ignite25_nextsteps_cnl) | Links to all repos for Ignite 2025 Sessions |
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit [Contributor License Agreements](https://cla.opensource.microsoft.com).
 

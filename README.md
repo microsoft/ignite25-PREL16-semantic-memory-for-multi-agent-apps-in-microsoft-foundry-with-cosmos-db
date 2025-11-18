@@ -4,7 +4,7 @@
 
 # [Microsoft Ignite 2025](https://ignite.microsoft.com)
 
-## 🔥PREL16: Preday: Implement Semantic Memories for Multi-Agent Apps in AI Foundry with an MCP Server for Azure Cosmos DB
+## 🔥PREL16: Preday: Implement Semantic Memories for Multi-Agent Apps in Microsoft Foundry with an MCP Server for Azure Cosmos DB
 
 ### Session Description
 
